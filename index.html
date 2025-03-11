@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Professional Portfolio</title>
+  <!-- Using Open Sans for a modern, professional look -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+  <style>
+    /* Ensure that anchor jumps account for the sticky header */
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+    
+    /* CSS Variables for Colors */
+    :root {
+      --accent: #4E7C59; /* Muted green accent */
+      --accent-hover: #3B5E47;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    /* Full-Width Section Wrapper */
+    /* Added scroll-margin-top to offset the sticky header when linking */
+    section {
+      width: 100%;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      animation: fadeInUp 0.8s ease-out both;
+      scroll-margin-top: 100px;
+    }
+    /* Inner content wrapper for centering content (for most sections) */
+    .section-content {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    
+    /* Complementary Background Colors */
+    .hero-section { background-color: #ffffff; }
+    .about-section { background-color: #f0f4f8; }
+    .experience-section { background-color: #f5f9f3; }
+    .portfolio-section { background-color: #f7f7f7; }
+    
+    /* Header & Navigation */
+    header {
+      background-color: rgb(255,255,255);
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: background-color 0.3s ease;
+    }
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    header nav ul li {
+      margin: 0 15px;
+    }
+    header nav ul li a {
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
+    header nav ul li a:hover {
+      color: var(--accent);
+      transform: scale(1.05);
+    }
+    
+    /* Keyframes for Fade In Up Animation */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Hero Section */
+    .hero-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .headshot {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .hero-text {
+      text-align: center;
+    }
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: #2C3E50;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+      color: #555;
+      font-weight: 300;
+    }
+    @media (max-width: 768px) {
+      .hero-container { flex-direction: column; text-align: center; }
+    }
+    
+    /* Experience Section: Full-Width with 95% inner width */
+    .experience-cards-wrapper {
+      width: 95%;
+      margin: 0 auto;
+    }
+    /* Added margin to shift the Experience heading to the right slightly */
+    .experience-section h2 {
+      margin-left: 5%;
+    }
+    .experience-cards-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 1200px) {
+      .experience-cards-container { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .experience-cards-container { grid-template-columns: 1fr; }
+    }
+    .experience-card {
+      background: #f1f3f5;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+    .experience-card:hover {
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    .experience-card h3 {
+      font-size: 1.2rem;
+      color: #2C3E50;
+      margin-bottom: 10px;
+    }
+    .experience-card .exp-date {
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+    .experience-card p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: #333;
+    }
+    
+    /* Portfolio Section */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .portfolio-item {
+      background: #f1f3f5;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    .portfolio-item a {
+      display: inline-block;
+    }
+    /* Ensure portfolio images are always the same size */
+    .portfolio-item img {
+       max-width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    /* Portfolio Tags */
+    .tags { margin-top: 10px; }
+    .tag {
+      display: inline-block;
+      background-color: #e3f2fd;
+      color: #1565c0;
+      border-radius: 16px;
+      padding: 6px 12px;
+      margin: 4px 4px 0 0;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #fff;
+      border-top: 1px solid #ccc;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="section-content">
+      <div class="hero-container">
+        <img src="tj_profile.jpg" alt="Headshot" class="headshot">
+        <div class="hero-text">
+          <h1>TJ Devane</h1>
+          <p>Professional Development Specialist | Computer Science Educator | Lifelong Learner</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="section-content">
+      <h2>About</h2>
+      <p>
+        Experienced education and technology professional with 13+ years in learning and development, curriculum design, and customer success, known for crafting engaging training experiences that simplify technical concepts and drive technology adoption. Passionate about innovation, AI, and empowering stakeholders to succeed.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Experience Section (Full-Width, with inner width 95%) -->
+  <section id="experience" class="experience-section">
+    <h2>Experience</h2>
+    <div class="experience-cards-wrapper">
+      <div class="experience-cards-container">
+        <div class="experience-card">
+          <h3>Mathematics Teacher</h3>
+          <div class="exp-date">August 2012 – June 2017</div>
+          <p>
+            Developed professional development for over 80 teachers by aligning academic standards with innovative tools, taught trigonometry, Algebra 2, and geometry, and implemented tailored programs for at-risk students to boost engagement and academic success.
+          </p>
+        </div>
+        <div class="experience-card">
+          <h3>Lead Computer Science & Mathematics Teacher</h3>
+          <div class="exp-date">August 2017 – June 2022</div>
+          <p>
+            Spearheaded the expansion of computer science programs by driving technology adoption and digital skill development, designing training and onboarding initiatives to enhance educator effectiveness, and facilitating professional development for over 90 educators with an emphasis on equitable technology integration.
+          </p>
+        </div>
+        <div class="experience-card">
+          <h3>Service Engineer Coordinator</h3>
+          <div class="exp-date">August 2022 - March 2023</div>
+          <p>
+            Coordinated engineering services by resolving complex customer issues and aligning solutions with client needs while streamlining daily operations and engineering workflows to enhance overall satisfaction.
+          </p>
+        </div>
+        <div class="experience-card">
+          <h3>Software Developer - Full Stack</h3>
+          <div class="exp-date">August 2022 - March 2023</div>
+          <p>
+            Contributed to the development of a CRM system by leveraging PHP, MySQL, Java, JavaScript, HTML, CSS, Bootstrap, jQuery, Python, and Linux to enhance functionality and improve user experience.
+          </p>
+        </div>
+        <div class="experience-card">
+          <h3>Professional Development Specialist</h3>
+          <div class="exp-date">April 2023 - Present</div>
+          <p>
+            Developed and delivered innovative professional development programs, conducted training needs assessments, designed tailored learning solutions, managed certification programs, and mentored teams to enhance training effectiveness.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio-section">
+    <div class="section-content">
+      <h2>Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <a href="https://www.loom.com/share/dac6fa6005d645e38e640d2ee1f0b7a8" target="_blank">
+            <img src="Rise_Course_Thumbnail.png" alt="Project 1">
+          </a>
+          <h3>Rise Internet Protocols Course</h3>
+          <p>This sample course project offers a concise introduction to Internet Protocols and reinforces key concepts through an interactive quiz.</p>
+          <div class="tags">
+            <span class="tag">Rise</span>
+            <span class="tag">Adobe Express</span>
+            <span class="tag">Camtasia</span>
+            <span class="tag">Vyond</span>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <a href="Applied_Research_Project_Thomas_Devane.pdf" target="_blank">
+            <img src="typewriter.jpg" alt="Project 2">
+          </a>
+          <h3>Designing Video Production with Cognitive Multimedia Learning Theory for Flipped Classroom Engagement</h3>
+          <p>The capstone explores how applying cognitive multimedia learning principles to video production can enhance student engagement and improve learning outcomes in a flipped classroom environment.</p>
+          <div class="tags">
+            <span class="tag">Cognitive Multimedia Learning</span>
+            <span class="tag">Instructional Design</span>
+            <span class="tag">Engagement</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <p>&copy; 2025 TJ Devane. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    // Dynamically update the header's background color as you scroll.
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector("header");
+      const maxScroll = 300; // Maximum scroll value for full transition
+      const progress = Math.min(window.scrollY / maxScroll, 1);
+      // Interpolate from white (255,255,255) to darker grey (200,200,200)
+      const r = Math.round(255 - (255 - 200) * progress);
+      const g = Math.round(255 - (255 - 200) * progress);
+      const b = Math.round(255 - (255 - 200) * progress);
+      header.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    });
+  </script>
+</body>
+</html>
