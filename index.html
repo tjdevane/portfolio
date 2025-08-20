@@ -3,18 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="TJ Devane - Professional Development Specialist with 13+ years in instructional design, technology, and learning solutions. Expert in workforce readiness and AI-driven initiatives."
-    />
-    <meta
-      name="keywords"
-      content="professional development, instructional design, learning technology, workforce training, AI initiatives"
-    />
-    <title>TJ Devane - Professional Development Specialist</title>
-    <!-- Using sophisticated font pairing -->
+    <title>My Professional Portfolio</title>
+    <!-- Using Open Sans for a modern, professional look -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -24,18 +16,10 @@
         scroll-padding-top: 100px;
       }
 
-      /* Enhanced CSS Variables for Colors */
+      /* CSS Variables for Colors */
       :root {
-        --accent: #4e7c59;
+        --accent: #4e7c59; /* Muted green accent */
         --accent-hover: #3b5e47;
-        --text-primary: #1a1a1a;
-        --text-secondary: #666;
-        --background-light: #fafafa;
-        --background-medium: #f5f5f5;
-        --white: #ffffff;
-        --border-light: #e0e0e0;
-        --shadow-light: rgba(0, 0, 0, 0.08);
-        --shadow-medium: rgba(0, 0, 0, 0.15);
       }
 
       * {
@@ -43,123 +27,79 @@
         padding: 0;
         box-sizing: border-box;
       }
-
       body {
-        font-family: "Inter", sans-serif;
-        line-height: 1.7;
-        background-color: var(--background-light);
-        color: var(--text-primary);
-        font-weight: 400;
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.6;
+        background-color: #f8f9fa;
+        color: #333;
       }
-
       a {
         text-decoration: none;
         color: inherit;
       }
 
-      /* Enhanced Section Styling */
+      /* Full-Width Section Wrapper */
+      /* Added scroll-margin-top to offset the sticky header when linking */
       section {
         width: 100%;
-        padding: 80px 20px;
+        padding: 40px 20px;
         box-sizing: border-box;
         animation: fadeInUp 0.8s ease-out both;
         scroll-margin-top: 100px;
-        position: relative;
       }
-
+      /* Inner content wrapper for centering content (for most sections) */
       .section-content {
-        max-width: 1200px;
+        max-width: 1100px;
         margin: 0 auto;
       }
 
-      /* Section Dividers */
-      .section-divider {
-        height: 1px;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          var(--border-light),
-          transparent
-        );
-        margin: 40px auto;
-        width: 80%;
-        opacity: 0.6;
-      }
-
-      /* Enhanced Background Colors */
+      /* Complementary Background Colors */
       .hero-section {
-        background: linear-gradient(
-          135deg,
-          var(--white) 0%,
-          var(--background-light) 100%
-        );
+        background-color: #ffffff;
       }
       .about-section {
-        background: var(--background-medium);
+        background-color: #f0f4f8;
       }
       .experience-section {
-        background: linear-gradient(
-          135deg,
-          var(--background-light) 0%,
-          var(--white) 100%
-        );
+        background-color: #f5f9f3;
       }
       .portfolio-section {
-        background: var(--background-medium);
+        background-color: #f7f7f7;
       }
 
-      /* Enhanced Header & Navigation */
+      /* Header & Navigation */
       header {
-        background-color: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
+        background-color: rgb(255, 255, 255);
         padding: 20px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         position: sticky;
         top: 0;
         z-index: 100;
-        transition: all 0.3s ease;
+        transition: background-color 0.3s ease;
       }
-
       header nav ul {
         list-style: none;
         display: flex;
         justify-content: center;
-        gap: 40px;
       }
-
+      header nav ul li {
+        margin: 0 15px;
+      }
       header nav ul li a {
-        color: var(--text-primary);
-        font-weight: 500;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
-        position: relative;
-        padding: 8px 0;
+        color: #333;
+        font-weight: 600;
+        transition: color 0.3s ease, transform 0.2s ease;
       }
-
-      header nav ul li a::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: var(--accent);
-        transition: width 0.3s ease;
-      }
-
-      header nav ul li a:hover::after {
-        width: 100%;
-      }
-
       header nav ul li a:hover {
         color: var(--accent);
+        transform: scale(1.05);
       }
 
-      /* Enhanced Keyframes */
+      /* Keyframes for Fade In Up Animation */
       @keyframes fadeInUp {
         from {
           opacity: 0;
-          transform: translateY(30px);
+          transform: translateY(20px);
         }
         to {
           opacity: 1;
@@ -167,327 +107,146 @@
         }
       }
 
-      /* Enhanced Hero Section */
+      /* Hero Section */
       .hero-container {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 40px;
+        gap: 20px;
         flex-wrap: wrap;
-        text-align: center;
       }
-
       .headshot {
-        width: 180px;
-        height: 180px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
         object-fit: cover;
-        border: 4px solid var(--accent);
-        box-shadow: 0 8px 32px rgba(78, 124, 89, 0.3);
-        transition: transform 0.3s ease;
+        border: 2px solid var(--accent);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
-
-      .headshot:hover {
-        transform: scale(1.05);
-      }
-
-      .hero-text h1 {
-        font-family: "Playfair Display", serif;
-        font-size: 3.5rem;
-        margin-bottom: 20px;
-        font-weight: 600;
-        color: var(--text-primary);
-        line-height: 1.2;
-      }
-
-      .hero-text .tagline {
-        font-size: 1.4rem;
-        color: var(--accent);
-        font-weight: 500;
-        margin-bottom: 15px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      .hero-text p {
-        font-size: 1.3rem;
-        color: var(--text-secondary);
-        font-weight: 400;
-        max-width: 600px;
-        margin: 0 auto;
-      }
-
-      /* Enhanced Typography */
-      h2 {
-        font-family: "Playfair Display", serif;
-        font-size: 2.8rem;
-        font-weight: 600;
-        color: var(--text-primary);
-        margin-bottom: 30px;
+      .hero-text {
         text-align: center;
-        position: relative;
+      }
+      .hero-text h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        font-weight: 700;
+        color: #2c3e50;
+      }
+      .hero-text p {
+        font-size: 1.2rem;
+        color: #555;
+        font-weight: 300;
+      }
+      @media (max-width: 768px) {
+        .hero-container {
+          flex-direction: column;
+          text-align: center;
+        }
       }
 
-      h2::after {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60px;
-        height: 3px;
-        background: var(--accent);
-        border-radius: 2px;
-      }
-
-      p {
-        font-size: 1.1rem;
-        line-height: 1.8;
-        color: var(--text-secondary);
-        margin-bottom: 20px;
-      }
-
-      /* Enhanced Experience Section */
+      /* Experience Section: Full-Width with 95% inner width */
       .experience-cards-wrapper {
-        width: 100%;
+        width: 95%;
         margin: 0 auto;
       }
-
+      /* Added margin to shift the Experience heading to the right slightly */
+      .experience-section h2 {
+        margin-left: 5%;
+      }
       .experience-cards-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
       }
-
-      .experience-card {
-        background: var(--white);
-        padding: 30px;
-        border-radius: 12px;
-        text-align: left;
-        border: 1px solid var(--border-light);
-        box-shadow: 0 4px 20px var(--shadow-light);
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
+      @media (max-width: 1200px) {
+        .experience-cards-container {
+          grid-template-columns: repeat(3, 1fr);
+        }
       }
-
-      .experience-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 4px;
-        height: 100%;
-        background: var(--accent);
-        transform: scaleY(0);
-        transition: transform 0.3s ease;
-      }
-
-      .experience-card:hover::before {
-        transform: scaleY(1);
-      }
-
-      .experience-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 40px var(--shadow-medium);
-      }
-
-      .experience-card h3 {
-        font-family: "Playfair Display", serif;
-        font-size: 1.4rem;
-        color: var(--text-primary);
-        margin-bottom: 8px;
-        font-weight: 600;
-      }
-
-      .experience-card .company {
-        font-size: 1rem;
-        color: var(--accent);
-        font-weight: 500;
-        margin-bottom: 5px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-
-      .experience-card .exp-date {
-        font-size: 0.9rem;
-        font-style: italic;
-        color: var(--text-secondary);
-        margin-bottom: 20px;
-        opacity: 0.8;
-      }
-
-      .experience-card p {
-        font-size: 1rem;
-        line-height: 1.6;
-        color: var(--text-secondary);
-        margin-bottom: 0;
-      }
-
-      /* Enhanced Portfolio Section */
-      .portfolio-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
-      }
-
-      .portfolio-item {
-        background: var(--white);
-        padding: 30px;
-        border-radius: 12px;
-        text-align: left;
-        border: 1px solid var(--border-light);
-        box-shadow: 0 4px 20px var(--shadow-light);
-        transition: all 0.3s ease;
-      }
-
-      .portfolio-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 40px var(--shadow-medium);
-      }
-
-      .portfolio-item img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-        border-radius: 8px;
-        margin-bottom: 20px;
-        transition: transform 0.3s ease;
-      }
-
-      .portfolio-item:hover img {
-        transform: scale(1.02);
-      }
-
-      .portfolio-item h3 {
-        font-family: "Playfair Display", serif;
-        font-size: 1.3rem;
-        color: var(--text-primary);
-        margin-bottom: 15px;
-        font-weight: 600;
-        line-height: 1.3;
-      }
-
-      .portfolio-item p {
-        margin-bottom: 20px;
-      }
-
-      .tags {
-        margin-top: 20px;
-      }
-
-      .tag {
-        display: inline-block;
-        background: linear-gradient(135deg, var(--accent), var(--accent-hover));
-        color: white;
-        border-radius: 20px;
-        padding: 8px 16px;
-        margin: 4px 8px 4px 0;
-        font-size: 0.85rem;
-        font-weight: 500;
-        transition: transform 0.2s ease;
-      }
-
-      .tag:hover {
-        transform: scale(1.05);
-      }
-
-      /* Enhanced Footer */
-      footer {
-        text-align: center;
-        padding: 40px 20px;
-        background: var(--text-primary);
-        color: var(--white);
-        margin-top: 0;
-        font-size: 1rem;
-      }
-
-      .footer-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 40px;
-        text-align: left;
-      }
-
-      .footer-section h4 {
-        font-family: "Playfair Display", serif;
-        font-size: 1.2rem;
-        margin-bottom: 15px;
-        color: var(--accent);
-      }
-
-      .footer-section p,
-      .footer-section a {
-        color: #ccc;
-        margin-bottom: 8px;
-        display: block;
-        transition: color 0.3s ease;
-      }
-
-      .footer-section a:hover {
-        color: var(--accent);
-      }
-
-      .social-links {
-        display: flex;
-        gap: 15px;
-        margin-top: 15px;
-      }
-
-      .social-links a {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        background: var(--accent);
-        color: white;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 40px;
-        transition: all 0.3s ease;
-      }
-
-      .social-links a:hover {
-        background: var(--accent-hover);
-        transform: scale(1.1);
-      }
-
-      /* Responsive Design */
       @media (max-width: 768px) {
-        section {
-          padding: 60px 20px;
-        }
-
-        .hero-text h1 {
-          font-size: 2.5rem;
-        }
-
-        .hero-text .tagline {
-          font-size: 1.1rem;
-        }
-
-        .hero-text p {
-          font-size: 1.1rem;
-        }
-
-        h2 {
-          font-size: 2.2rem;
-        }
-
         .experience-cards-container {
           grid-template-columns: 1fr;
         }
+      }
+      .experience-card {
+        background: #f1f3f5;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        transition: box-shadow 0.3s ease;
+      }
+      .experience-card:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      }
+      .experience-card h3 {
+        font-size: 1.2rem;
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+      .experience-card .exp-date {
+        font-size: 0.95rem;
+        font-style: italic;
+        color: var(--accent);
+        margin-bottom: 15px;
+      }
+      .experience-card p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        color: #333;
+      }
 
-        .portfolio-grid {
-          grid-template-columns: 1fr;
-        }
+      /* Portfolio Section */
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+      .portfolio-item {
+        background: #f1f3f5;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .portfolio-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      }
+      .portfolio-item a {
+        display: inline-block;
+      }
+      /* Ensure portfolio images are always the same size */
+      .portfolio-item img {
+        max-width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+      /* Portfolio Tags */
+      .tags {
+        margin-top: 10px;
+      }
+      .tag {
+        display: inline-block;
+        background-color: #e3f2fd;
+        color: #1565c0;
+        border-radius: 16px;
+        padding: 6px 12px;
+        margin: 4px 4px 0 0;
+        font-size: 0.85rem;
+        font-weight: 500;
+      }
 
-        header nav ul {
-          gap: 20px;
-        }
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #fff;
+        border-top: 1px solid #ccc;
+        margin-top: 40px;
+        font-size: 0.9rem;
+        color: #555;
       }
     </style>
   </head>
@@ -499,7 +258,6 @@
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -508,18 +266,13 @@
     <section id="hero" class="hero-section">
       <div class="section-content">
         <div class="hero-container">
-          <img
-            src="tj_profile.jpg"
-            alt="TJ Devane - Professional Development Specialist"
-            class="headshot"
-          />
+          <img src="tj_profile.jpg" alt="Headshot" class="headshot" />
           <div class="hero-text">
-            <div class="tagline">Professional Development Specialist</div>
             <h1>TJ Devane</h1>
             <p>
-              Advancing Workforce Readiness Through Engaging Learning |
-              Simplifying Technical Concepts for Real-World Application | 13+
-              Years of Instructional Design Excellence
+              Professional Development Specialist | Advancing Workforce
+              Readiness Through Engaging Learning | Simplifying Technical
+              Concepts for Real-World Application
             </p>
           </div>
         </div>
@@ -529,74 +282,45 @@
     <!-- About Section -->
     <section id="about" class="about-section">
       <div class="section-content">
-        <h2>About Me</h2>
-        <div class="section-divider"></div>
+        <h2>About</h2>
         <p>
-          I'm a results-driven learning and technology professional with over 13
+          I’m a results-driven learning and technology professional with over 13
           years of experience in instructional design, professional development,
           and customer success. I specialize in designing and facilitating
           impactful training programs that enhance learner engagement, support
-          technology adoption, and align with organizational goals.
-        </p>
-        <p>
-          Known for simplifying complex topics and translating them into
-          actionable learning strategies, I empower adult learners and teams to
-          achieve measurable success. I also lead AI-driven initiatives that
-          enhance instructional design and streamline internal processes,
-          helping organizations scale their learning programs more effectively.
-        </p>
-        <p>
-          As a self-taught programmer with a passion for continuous growth, I
-          bring curiosity, adaptability, and innovation to every learning
-          solution I create. My work has directly impacted over 500+ educators
-          and professionals, delivering engaging, results-oriented learning
-          experiences that make a lasting impact.
+          technology adoption, and align with organizational goals. Known for
+          simplifying complex topics and translating them into actionable
+          learning strategies, I empower adult learners and teams to achieve
+          measurable success. I also lead AI-driven initiatives that enhance
+          instructional design and streamline internal processes, helping
+          organizations scale their learning programs more effectively. As a
+          self-taught programmer with a passion for continuous growth, I bring
+          curiosity, adaptability, and innovation to every learning solution I
+          create. Explore my portfolio to see how I deliver engaging,
+          results-oriented learning experiences that make a lasting impact.
         </p>
       </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- Experience Section (Full-Width, with inner width 95%) -->
     <section id="experience" class="experience-section">
-      <div class="section-content">
-        <h2>Professional Experience</h2>
-        <div class="section-divider"></div>
+      <h2>Experience</h2>
+      <div class="experience-cards-wrapper">
         <div class="experience-cards-container">
           <div class="experience-card">
-            <h3>Professional Development Specialist</h3>
-            <div class="company">Rise Learning Solutions</div>
-            <div class="exp-date">April 2023 - Present</div>
+            <h3>Mathematics Teacher</h3>
+            <div class="exp-date">August 2012 – June 2017</div>
             <p>
-              Developed and delivered innovative professional development
-              programs, conducted training needs assessments, designed tailored
-              learning solutions, managed certification programs, and mentored
-              teams to enhance training effectiveness.
-            </p>
-          </div>
-          <div class="experience-card">
-            <h3>Software Developer - Full Stack</h3>
-            <div class="company">TechCorp Solutions</div>
-            <div class="exp-date">August 2022 - March 2023</div>
-            <p>
-              Contributed to the development of a CRM system by leveraging PHP,
-              MySQL, Java, JavaScript, HTML, CSS, Bootstrap, jQuery, Python, and
-              Linux to enhance functionality and improve user experience.
-            </p>
-          </div>
-          <div class="experience-card">
-            <h3>Service Engineer Coordinator</h3>
-            <div class="company">Engineering Services Inc.</div>
-            <div class="exp-date">August 2022 - March 2023</div>
-            <p>
-              Coordinated engineering services by resolving complex customer
-              issues and aligning solutions with client needs while streamlining
-              daily operations and engineering workflows to enhance overall
-              satisfaction.
+              Developed professional development for over 80 teachers by
+              aligning academic standards with innovative tools, taught
+              trigonometry, Algebra 2, and geometry, and implemented tailored
+              programs for at-risk students to boost engagement and academic
+              success.
             </p>
           </div>
           <div class="experience-card">
             <h3>Lead Computer Science & Mathematics Teacher</h3>
-            <div class="company">Innovation Academy</div>
-            <div class="exp-date">August 2017 - June 2022</div>
+            <div class="exp-date">August 2017 – June 2022</div>
             <p>
               Spearheaded the expansion of computer science programs by driving
               technology adoption and digital skill development, designing
@@ -606,15 +330,32 @@
             </p>
           </div>
           <div class="experience-card">
-            <h3>Mathematics Teacher</h3>
-            <div class="company">Excellence High School</div>
-            <div class="exp-date">August 2012 - June 2017</div>
+            <h3>Service Engineer Coordinator</h3>
+            <div class="exp-date">August 2022 - March 2023</div>
             <p>
-              Developed professional development for over 80 teachers by
-              aligning academic standards with innovative tools, taught
-              trigonometry, Algebra 2, and geometry, and implemented tailored
-              programs for at-risk students to boost engagement and academic
-              success.
+              Coordinated engineering services by resolving complex customer
+              issues and aligning solutions with client needs while streamlining
+              daily operations and engineering workflows to enhance overall
+              satisfaction.
+            </p>
+          </div>
+          <div class="experience-card">
+            <h3>Software Developer - Full Stack</h3>
+            <div class="exp-date">August 2022 - March 2023</div>
+            <p>
+              Contributed to the development of a CRM system by leveraging PHP,
+              MySQL, Java, JavaScript, HTML, CSS, Bootstrap, jQuery, Python, and
+              Linux to enhance functionality and improve user experience.
+            </p>
+          </div>
+          <div class="experience-card">
+            <h3>Professional Development Specialist</h3>
+            <div class="exp-date">April 2023 - Present</div>
+            <p>
+              Developed and delivered innovative professional development
+              programs, conducted training needs assessments, designed tailored
+              learning solutions, managed certification programs, and mentored
+              teams to enhance training effectiveness.
             </p>
           </div>
         </div>
@@ -624,25 +365,20 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio-section">
       <div class="section-content">
-        <h2>Featured Projects</h2>
-        <div class="section-divider"></div>
+        <h2>Portfolio</h2>
         <div class="portfolio-grid">
           <div class="portfolio-item">
             <a href="content/index.html" target="_blank">
-              <img
-                src="Rise_Course_Thumbnail.png"
-                alt="Rise Internet Protocols Course"
-              />
+              <img src="Rise_Course_Thumbnail.png" alt="Project 1" />
             </a>
             <h3>Rise Internet Protocols Course</h3>
             <p>
-              This comprehensive course project offers an engaging introduction
-              to Internet Protocols through interactive modules, real-world
-              examples, and knowledge reinforcement quizzes. Designed to enhance
-              understanding of fundamental networking concepts.
+              This sample course project offers a concise introduction to
+              Internet Protocols and reinforces key concepts through an
+              interactive quiz.
             </p>
             <div class="tags">
-              <span class="tag">Rise 360</span>
+              <span class="tag">Rise</span>
               <span class="tag">Adobe Express</span>
               <span class="tag">Camtasia</span>
               <span class="tag">Vyond</span>
@@ -653,25 +389,20 @@
               href="Applied_Research_Project_Thomas_Devane.pdf"
               target="_blank"
             >
-              <img
-                src="typewriter.jpg"
-                alt="Research on Video Production and Cognitive Learning"
-              />
+              <img src="typewriter.jpg" alt="Project 2" />
             </a>
             <h3>
               Designing Video Production with Cognitive Multimedia Learning
               Theory for Flipped Classroom Engagement
             </h3>
             <p>
-              This capstone research explores how applying cognitive multimedia
-              learning principles to video production can significantly enhance
-              student engagement and improve learning outcomes in a flipped
-              classroom environment.
+              The capstone explores how applying cognitive multimedia learning
+              principles to video production can enhance student engagement and
+              improve learning outcomes in a flipped classroom environment.
             </p>
             <div class="tags">
               <span class="tag">Cognitive Multimedia Learning</span>
               <span class="tag">Instructional Design</span>
-              <span class="tag">Research</span>
               <span class="tag">Engagement</span>
             </div>
           </div>
@@ -679,115 +410,22 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="hero-section">
-      <div class="section-content">
-        <h2>Get In Touch</h2>
-        <div class="section-divider"></div>
-        <div style="text-align: center; max-width: 600px; margin: 0 auto">
-          <p style="font-size: 1.2rem; margin-bottom: 30px">
-            I'm always interested in discussing new opportunities,
-            collaborations, or learning projects. Let's connect and explore how
-            we can work together to create impactful learning experiences.
-          </p>
-          <div style="margin-top: 40px">
-            <a
-              href="mailto:contact@tjdevane.com"
-              style="
-                display: inline-block;
-                background: var(--accent);
-                color: white;
-                padding: 15px 30px;
-                border-radius: 25px;
-                font-weight: 500;
-                transition: all 0.3s ease;
-                text-decoration: none;
-              "
-              onmouseover="this.style.background='var(--accent-hover)'"
-              onmouseout="this.style.background='var(--accent)'"
-            >
-              Send Me a Message
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <footer>
-      <div class="footer-content">
-        <div class="footer-section">
-          <h4>Contact Information</h4>
-          <p>Email: contact@tjdevane.com</p>
-          <p>Location: United States</p>
-          <p>Available for remote work</p>
-        </div>
-        <div class="footer-section">
-          <h4>Expertise</h4>
-          <p>Professional Development</p>
-          <p>Instructional Design</p>
-          <p>Learning Technology</p>
-          <p>AI-Driven Initiatives</p>
-        </div>
-        <div class="footer-section">
-          <h4>Connect</h4>
-          <p>Let's discuss your next learning project</p>
-          <div class="social-links">
-            <a href="#" title="LinkedIn">L</a>
-            <a href="#" title="GitHub">G</a>
-            <a href="#" title="Twitter">T</a>
-          </div>
-        </div>
-      </div>
-      <div
-        style="
-          text-align: center;
-          margin-top: 40px;
-          padding-top: 20px;
-          border-top: 1px solid #333;
-        "
-      >
-        <p>&copy; 2025 TJ Devane. All rights reserved.</p>
-      </div>
+      <p>&copy; 2025 TJ Devane. All rights reserved.</p>
     </footer>
 
     <script>
-      // Enhanced scroll effects
+      // Dynamically update the header's background color as you scroll.
       window.addEventListener("scroll", function () {
         const header = document.querySelector("header");
-        const maxScroll = 300;
+        const maxScroll = 300; // Maximum scroll value for full transition
         const progress = Math.min(window.scrollY / maxScroll, 1);
-
-        // Smooth background transition
+        // Interpolate from white (255,255,255) to darker grey (200,200,200)
         const r = Math.round(255 - (255 - 200) * progress);
         const g = Math.round(255 - (255 - 200) * progress);
         const b = Math.round(255 - (255 - 200) * progress);
-        header.style.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.95)`;
+        header.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
       });
-
-      // Smooth reveal animations for cards
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-          }
-        });
-      }, observerOptions);
-
-      // Observe all cards
-      document
-        .querySelectorAll(".experience-card, .portfolio-item")
-        .forEach((card) => {
-          card.style.opacity = "0";
-          card.style.transform = "translateY(20px)";
-          card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-          observer.observe(card);
-        });
     </script>
   </body>
 </html>
