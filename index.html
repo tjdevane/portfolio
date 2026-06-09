@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="TJ Devane - Professional Development Specialist with 13+ years in instructional design, technology, and learning solutions. Expert in workforce readiness and AI-driven initiatives."
+      content="TJ Devane - Learning Experience Designer & Enablement Strategist with 13+ years across EdTech and SaaS. Certification programs, GTM readiness, and AI-augmented content."
     />
     <meta
       name="keywords"
-      content="professional development, instructional design, learning technology, workforce training, AI initiatives"
+      content="learning experience design, instructional design, sales enablement, GTM readiness, certification programs, customer success, AI tools, EdTech, SaaS"
     />
     <title>TJ Devane - Portfolio</title>
     <!-- Using sophisticated font pairing -->
@@ -23,7 +23,6 @@
         scroll-behavior: smooth;
         scroll-padding-top: 100px;
       }
-
       /* Enhanced CSS Variables for Colors */
       :root {
         --accent: #4e7c59;
@@ -37,13 +36,11 @@
         --shadow-light: rgba(0, 0, 0, 0.08);
         --shadow-medium: rgba(0, 0, 0, 0.15);
       }
-
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
-
       body {
         font-family: "Inter", sans-serif;
         line-height: 1.7;
@@ -51,12 +48,10 @@
         color: var(--text-primary);
         font-weight: 400;
       }
-
       a {
         text-decoration: none;
         color: inherit;
       }
-
       /* Enhanced Section Styling */
       section {
         width: 100%;
@@ -66,12 +61,10 @@
         scroll-margin-top: 100px;
         position: relative;
       }
-
       .section-content {
         max-width: 1200px;
         margin: 0 auto;
       }
-
       /* Section Dividers */
       .section-divider {
         height: 1px;
@@ -85,7 +78,6 @@
         width: 80%;
         opacity: 0.6;
       }
-
       /* Enhanced Background Colors */
       .hero-section {
         background: linear-gradient(
@@ -107,7 +99,6 @@
       .portfolio-section {
         background: var(--background-medium);
       }
-
       /* Enhanced Header & Navigation */
       header {
         background-color: rgba(255, 255, 255, 0.95);
@@ -119,14 +110,12 @@
         z-index: 100;
         transition: all 0.3s ease;
       }
-
       header nav ul {
         list-style: none;
         display: flex;
         justify-content: center;
         gap: 40px;
       }
-
       header nav ul li a {
         color: var(--text-primary);
         font-weight: 500;
@@ -135,7 +124,6 @@
         position: relative;
         padding: 8px 0;
       }
-
       header nav ul li a::after {
         content: "";
         position: absolute;
@@ -146,15 +134,14 @@
         background: var(--accent);
         transition: width 0.3s ease;
       }
-
-      header nav ul li a:hover::after {
+      header nav ul li a:hover::after,
+      header nav ul li a.active::after {
         width: 100%;
       }
-
-      header nav ul li a:hover {
+      header nav ul li a:hover,
+      header nav ul li a.active {
         color: var(--accent);
       }
-
       /* Enhanced Keyframes */
       @keyframes fadeInUp {
         from {
@@ -166,7 +153,6 @@
           transform: translateY(0);
         }
       }
-
       /* Enhanced Hero Section */
       .hero-container {
         display: flex;
@@ -176,7 +162,6 @@
         flex-wrap: wrap;
         text-align: center;
       }
-
       .headshot {
         width: 180px;
         height: 180px;
@@ -186,11 +171,9 @@
         box-shadow: 0 8px 32px rgba(78, 124, 89, 0.3);
         transition: transform 0.3s ease;
       }
-
       .headshot:hover {
         transform: scale(1.05);
       }
-
       .hero-text h1 {
         font-family: "Playfair Display", serif;
         font-size: 3.5rem;
@@ -199,7 +182,6 @@
         color: var(--text-primary);
         line-height: 1.2;
       }
-
       .hero-text .tagline {
         font-size: 1.4rem;
         color: var(--accent);
@@ -208,7 +190,6 @@
         text-transform: uppercase;
         letter-spacing: 1px;
       }
-
       .hero-text p {
         font-size: 1.3rem;
         color: var(--text-secondary);
@@ -216,7 +197,6 @@
         max-width: 600px;
         margin: 0 auto;
       }
-
       /* Enhanced Typography */
       h2 {
         font-family: "Playfair Display", serif;
@@ -227,7 +207,6 @@
         text-align: center;
         position: relative;
       }
-
       h2::after {
         content: "";
         position: absolute;
@@ -239,27 +218,45 @@
         background: var(--accent);
         border-radius: 2px;
       }
-
       p {
         font-size: 1.1rem;
         line-height: 1.8;
         color: var(--text-secondary);
         margin-bottom: 20px;
       }
-
+      /* Subtle metrics strip */
+      .metrics-strip {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+        padding-top: 45px;
+        border-top: 1px solid var(--border-light);
+        text-align: center;
+      }
+      .metric .metric-number {
+        font-family: "Playfair Display", serif;
+        font-size: 2.6rem;
+        font-weight: 600;
+        color: var(--accent);
+        line-height: 1.1;
+      }
+      .metric .metric-label {
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        margin-top: 6px;
+      }
       /* Enhanced Experience Section */
       .experience-cards-wrapper {
         width: 100%;
         margin: 0 auto;
       }
-
       .experience-cards-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
         margin-top: 40px;
       }
-
       .experience-card {
         background: var(--white);
         padding: 30px;
@@ -271,7 +268,6 @@
         position: relative;
         overflow: hidden;
       }
-
       .experience-card::before {
         content: "";
         position: absolute;
@@ -283,16 +279,13 @@
         transform: scaleY(0);
         transition: transform 0.3s ease;
       }
-
       .experience-card:hover::before {
         transform: scaleY(1);
       }
-
       .experience-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 12px 40px var(--shadow-medium);
       }
-
       .experience-card h3 {
         font-family: "Playfair Display", serif;
         font-size: 1.4rem;
@@ -300,7 +293,6 @@
         margin-bottom: 8px;
         font-weight: 600;
       }
-
       .experience-card .company {
         font-size: 1rem;
         color: var(--accent);
@@ -309,7 +301,6 @@
         text-transform: uppercase;
         letter-spacing: 0.5px;
       }
-
       .experience-card .exp-date {
         font-size: 0.9rem;
         font-style: italic;
@@ -317,14 +308,12 @@
         margin-bottom: 20px;
         opacity: 0.8;
       }
-
       .experience-card p {
         font-size: 1rem;
         line-height: 1.6;
         color: var(--text-secondary);
         margin-bottom: 0;
       }
-
       /* Enhanced Portfolio Section */
       .portfolio-grid {
         display: grid;
@@ -332,7 +321,6 @@
         gap: 30px;
         margin-top: 40px;
       }
-
       .portfolio-item {
         background: var(--white);
         padding: 30px;
@@ -342,12 +330,10 @@
         box-shadow: 0 4px 20px var(--shadow-light);
         transition: all 0.3s ease;
       }
-
       .portfolio-item:hover {
         transform: translateY(-5px);
         box-shadow: 0 12px 40px var(--shadow-medium);
       }
-
       .portfolio-item img {
         width: 100%;
         height: 250px;
@@ -356,11 +342,9 @@
         margin-bottom: 20px;
         transition: transform 0.3s ease;
       }
-
       .portfolio-item:hover img {
         transform: scale(1.02);
       }
-
       .portfolio-item h3 {
         font-family: "Playfair Display", serif;
         font-size: 1.3rem;
@@ -369,15 +353,12 @@
         font-weight: 600;
         line-height: 1.3;
       }
-
       .portfolio-item p {
         margin-bottom: 20px;
       }
-
       .tags {
         margin-top: 20px;
       }
-
       .tag {
         display: inline-block;
         background: linear-gradient(135deg, var(--accent), var(--accent-hover));
@@ -389,11 +370,9 @@
         font-weight: 500;
         transition: transform 0.2s ease;
       }
-
       .tag:hover {
         transform: scale(1.05);
       }
-
       /* Enhanced Footer */
       footer {
         text-align: center;
@@ -403,7 +382,6 @@
         margin-top: 0;
         font-size: 1rem;
       }
-
       .footer-content {
         max-width: 1200px;
         margin: 0 auto;
@@ -412,14 +390,12 @@
         gap: 40px;
         text-align: left;
       }
-
       .footer-section h4 {
         font-family: "Playfair Display", serif;
         font-size: 1.2rem;
         margin-bottom: 15px;
         color: var(--accent);
       }
-
       .footer-section p,
       .footer-section a {
         color: #ccc;
@@ -427,17 +403,14 @@
         display: block;
         transition: color 0.3s ease;
       }
-
       .footer-section a:hover {
         color: var(--accent);
       }
-
       .social-links {
         display: flex;
         gap: 15px;
         margin-top: 15px;
       }
-
       .social-links a {
         display: inline-block;
         width: 40px;
@@ -449,42 +422,81 @@
         line-height: 40px;
         transition: all 0.3s ease;
       }
-
       .social-links a:hover {
         background: var(--accent-hover);
         transform: scale(1.1);
       }
-
+      /* Contact CTA button */
+      .contact-btn {
+        display: inline-block;
+        background: var(--accent);
+        color: white;
+        padding: 15px 30px;
+        border-radius: 25px;
+        font-weight: 500;
+        text-decoration: none;
+        box-shadow: 0 6px 20px rgba(78, 124, 89, 0.25);
+        transition: background 0.3s ease, transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .contact-btn:hover {
+        background: var(--accent-hover);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 28px rgba(78, 124, 89, 0.35);
+      }
+      /* Back to top */
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 48px;
+        height: 48px;
+        background: var(--accent);
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        box-shadow: 0 6px 20px rgba(78, 124, 89, 0.35);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        z-index: 90;
+      }
+      .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .back-to-top:hover {
+        background: var(--accent-hover);
+        transform: translateY(-3px);
+      }
       /* Responsive Design */
       @media (max-width: 768px) {
         section {
           padding: 60px 20px;
         }
-
         .hero-text h1 {
           font-size: 2.5rem;
         }
-
         .hero-text .tagline {
           font-size: 1.1rem;
         }
-
         .hero-text p {
           font-size: 1.1rem;
         }
-
         h2 {
           font-size: 2.2rem;
         }
-
         .experience-cards-container {
           grid-template-columns: 1fr;
         }
-
         .portfolio-grid {
           grid-template-columns: 1fr;
         }
-
         header nav ul {
           gap: 20px;
         }
@@ -503,79 +515,84 @@
         </ul>
       </nav>
     </header>
-
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
       <div class="section-content">
         <div class="hero-container">
           <img
             src="tj_profile.jpg"
-            alt="TJ Devane - Professional Development Specialist"
+            alt="TJ Devane - Learning Experience Designer & Enablement Strategist"
             class="headshot"
           />
           <div class="hero-text">
             <div class="tagline">Learning Experience Designer</div>
             <h1>TJ Devane</h1>
             <p>
-              Learning Experience Designer | Product & Program Strategy |
-              Building Scalable Solutions Across Education and Tech
+              Learning Experience &amp; Enablement | GTM Readiness &amp;
+              Certification Programs | Building Scalable, AI-Augmented Learning
+              Across EdTech and SaaS
             </p>
           </div>
         </div>
       </div>
     </section>
-
     <!-- About Section -->
     <section id="about" class="about-section">
       <div class="section-content">
         <h2>About Me</h2>
         <div class="section-divider"></div>
         <p>
-          I’m a learning experience designer and product-minded professional
-          passionate about building smart, scalable solutions that help people
-          learn, grow, and succeed.
+          I started in the classroom teaching math, taught myself to code, and
+          founded a high-school computer science department from the ground up.
+          That path, educator to developer to enablement, is the thread that
+          runs through everything I do. I'm happiest where learning meets
+          technology, translating something genuinely complex into something
+          people can actually use.
         </p>
         <p>
-          With a background spanning instructional design, product strategy, and
-          solutions enablement, I work at the intersection of education,
-          technology, and business. My experience includes leading national
-          certification programs, designing engaging and measurable learning
-          experiences, developing technical onboarding resources, and partnering
-          with engineering, product, and sales teams to turn ideas into
-          impactful outcomes.
+          Today, at CodeHS, I build the learning systems and enablement programs
+          that help a national K-12 SaaS platform drive adoption and readiness. I
+          work across product, engineering, revenue, and customer-facing teams,
+          redesigning certification programs, launching new cohorts, equipping
+          go-to-market teams to sell, and turning raw subject-matter expertise
+          into clear, scalable learning. My computer science background means I
+          can sit comfortably with engineers and SMEs, then carry what they know
+          back to the people who need it.
         </p>
         <p>
-          What drives me most is a deep curiosity and eagerness to learn.
-          Whether diving into new technologies, analyzing product feedback, or
-          exploring better ways to support customers and learners, I bring a
-          strong capacity to learn quickly and connect the dots across
-          disciplines. My blend of technical fluency and learning design
-          expertise allows me to bridge gaps between teams and keep the user
-          experience at the center.
+          I'm genuinely AI-forward in how I work, not as a buzzword but as a
+          daily production habit. I use tools like Claude, custom GPTs, and
+          automation to ship better content faster, and I keep piloting what's
+          new to see what actually earns a place in the workflow. Mostly, I'm
+          driven by curiosity and a bias toward building. I'd rather prototype
+          the thing than write a deck about it.
         </p>
         <p>
-          I hold advanced degrees in education, mathematics, and computer
-          science education, and bring years of experience designing and scaling
-          solutions that not only improve learning but also drive adoption,
-          engagement, and business results.
+          I hold advanced degrees in Education and Computer Science Education, a
+          B.S. in Mathematics, and recent certifications in Agile, Product
+          Management, and Sales Enablement. The numbers below tell the rest of
+          the story.
         </p>
-        <p>
-          Known for simplifying complex topics and translating them into
-          actionable learning strategies, I empower adult learners and teams to
-          achieve measurable success. I also lead AI-driven initiatives that
-          enhance instructional design and streamline internal processes,
-          helping organizations scale their learning programs more effectively.
-        </p>
-        <p>
-          As a self-taught programmer with a passion for continuous growth, I
-          bring curiosity, adaptability, and innovation to every learning
-          solution I create. My work has directly impacted over 500+ educators
-          and professionals, delivering engaging, results-oriented learning
-          experiences that make a lasting impact.
-        </p>
+        <div class="metrics-strip">
+          <div class="metric">
+            <div class="metric-number" data-target="700" data-suffix="+">0</div>
+            <div class="metric-label">Educators reached through certification</div>
+          </div>
+          <div class="metric">
+            <div class="metric-number" data-target="5" data-suffix="x">0</div>
+            <div class="metric-label">Growth in AP CSA cohorts year over year</div>
+          </div>
+          <div class="metric">
+            <div class="metric-number" data-target="30" data-prefix="~" data-suffix="%">0</div>
+            <div class="metric-label">Less content dev time via AI workflows</div>
+          </div>
+          <div class="metric">
+            <div class="metric-number" data-target="13" data-suffix="+">0</div>
+            <div class="metric-label">Years across EdTech, SaaS, education</div>
+          </div>
+        </div>
       </div>
     </section>
-
     <!-- Experience Section -->
     <section id="experience" class="experience-section">
       <div class="section-content">
@@ -583,79 +600,69 @@
         <div class="section-divider"></div>
         <div class="experience-cards-container">
           <div class="experience-card">
-            <h3>Professional Development Specialist III</h3>
+            <h3>Professional Development Specialist (I to III)</h3>
             <div class="company">CodeHS</div>
-            <div class="exp-date">April 2023 - Present</div>
+            <div class="exp-date">April 2023 - Present &middot; Remote</div>
             <p>
-              At CodeHS, I led the redesign of a national certification program,
-              created blended learning solutions for educators and technical
-              teams, and developed onboarding resources and technical
-              documentation in partnership with product and engineering. I
-              introduced AI-powered workflows to streamline content creation and
-              managed a multi-state certification program, aligning it with
-              evolving user needs and priorities.
+              I design and scale learning, enablement, and GTM readiness programs
+              for a national K-12 SaaS platform. I redesigned the flagship
+              Teacher Certification Program end to end (curriculum, mock exams,
+              60+ support videos, and job aids), lifting pass rates 7% across 700+
+              educators, and launched the first national AP CSA Teacher Cohort
+              that 5x'd the following year. I serve as a pre-sales SME on sales
+              and renewal calls (contributing to 3x more cohort requests and 2x
+              more purchases), led GTM enablement for a new AI product, and built
+              AI-assisted content workflows that cut development time roughly 30%
+              while managing a team of six.
             </p>
           </div>
           <div class="experience-card">
-            <h3>Software Developer - Full Stack</h3>
-            <div class="company">AJA International</div>
-            <div class="exp-date">August 2022 - March 2023</div>
+            <h3>Software Developer &amp; Service Engineer Coordinator</h3>
+            <div class="company">AJA International, Inc.</div>
+            <div class="exp-date">August 2022 - March 2023 &middot; Scituate, MA</div>
             <p>
-              As a Software Developer, I built solutions to improve internal
-              systems and streamline technical service operations. I designed
-              and implemented CRM enhancements that improved data management and
-              workflow efficiency, developed internal tools for scheduling,
-              communication, and reporting, and partnered with engineering and
-              operations teams to deliver technology solutions aligned with
-              business needs.
+              I built CRM and ERP enhancements and internal tooling (HTML, CSS,
+              JavaScript, PHP, MySQL, Bootstrap, jQuery) to organize business and
+              customer communication and streamline global technical service
+              operations. As lead liaison between Engineering and customer-facing
+              teams, I translated complex technical capabilities into clear
+              documentation, job aids, and onboarding materials, managing six
+              service engineers and 50+ daily customer interactions while
+              standardizing CRM workflows to reduce resolution time.
             </p>
           </div>
           <div class="experience-card">
-            <h3>Service Engineer Coordinator</h3>
-            <div class="company">AJA International</div>
-            <div class="exp-date">August 2022 - March 2023</div>
+            <h3>Lead Computer Science &amp; Mathematics Teacher</h3>
+            <div class="company">Anne Arundel County Public Schools</div>
+            <div class="exp-date">August 2017 - June 2022 &middot; Annapolis, MD</div>
             <p>
-              As a Service Engineering Coordinator, I oversaw global technical
-              service operations to ensure consistency, efficiency, and customer
-              satisfaction. I managed service requests and resource allocation,
-              developed technical documentation and onboarding resources for
-              service teams, and acted as a liaison between engineers and
-              customer service teams to troubleshoot and resolve technical
-              challenges.
-            </p>
-          </div>
-          <div class="experience-card">
-            <h3>Lead Computer Science & Mathematics Teacher</h3>
-            <div class="company">AACPS</div>
-            <div class="exp-date">August 2017 - June 2022</div>
-            <p>
-              At Anne Arundel County Public Schools, I established and led a new
-              computer science department to meet growing demand for technical
-              education. I designed AP and cybersecurity curricula with
-              industry-standard tools, led professional learning for educators,
-              mentored new CS teachers, and collaborated with district
-              leadership on diversity, equity, and inclusion initiatives to
-              expand access to STEM pathways.
+              I founded and scaled the computer science department at a new high
+              school of 1,200+ students, growing it from 1.5 to 3 teachers and 8
+              to 18 courses, and developing AP CS A, AP CS Principles, and
+              cybersecurity curricula. I designed and delivered system-wide
+              professional development on inclusive practices and DEI for 80+
+              educators, conducted performance gap analyses for 175+ learners,
+              coached all new CS teachers, and ran an original two-week MIT App
+              Inventor summer program for middle-school students.
             </p>
           </div>
           <div class="experience-card">
             <h3>Mathematics Teacher</h3>
-            <div class="company">HCPS</div>
-            <div class="exp-date">August 2012 - June 2017</div>
+            <div class="company">Harford County Public Schools</div>
+            <div class="exp-date">August 2012 - June 2017 &middot; Bel Air, MD</div>
             <p>
-              At Harford County Public Schools, I taught mathematics through
-              student-centered, engaging instruction while contributing to
-              school-wide professional learning initiatives. I led workshops on
-              active learning strategies, mentored early-career teachers in
-              curriculum design and instructional practice, and developed
-              targeted supports to help students strengthen skills and meet
-              learning goals.
+              I delivered student-centered mathematics instruction while
+              contributing to school-wide professional learning. I designed and
+              facilitated annual math and pedagogical professional development for
+              80+ educators aligned to standards and best practices, coached
+              newly hired teachers through classroom observations and custom
+              resource development, and built academic and behavioral
+              interventions for 30+ at-risk students informed by performance data.
             </p>
           </div>
         </div>
       </div>
     </section>
-
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio-section">
       <div class="section-content">
@@ -673,10 +680,10 @@
               <h3>Rise Internet Protocols Course</h3>
             </a>
             <p>
-              This comprehensive course project offers an engaging introduction
-              to Internet Protocols through interactive modules, real-world
-              examples, and knowledge reinforcement quizzes. Designed to enhance
-              understanding of fundamental networking concepts.
+              An engaging introduction to Internet Protocols through interactive
+              modules, real-world examples, and knowledge reinforcement quizzes.
+              Designed to strengthen understanding of fundamental networking
+              concepts.
             </p>
             <div class="tags">
               <span class="tag">Rise 360</span>
@@ -720,7 +727,6 @@
         </div>
       </div>
     </section>
-
     <!-- Contact Section -->
     <section id="contact" class="hero-section">
       <div class="section-content">
@@ -736,18 +742,7 @@
             <a
               href="https://www.linkedin.com/in/thomas-devane/"
               target="_blank"
-              style="
-                display: inline-block;
-                background: var(--accent);
-                color: white;
-                padding: 15px 30px;
-                border-radius: 25px;
-                font-weight: 500;
-                transition: all 0.3s ease;
-                text-decoration: none;
-              "
-              onmouseover="this.style.background='var(--accent-hover)'"
-              onmouseout="this.style.background='var(--accent)'"
+              class="contact-btn"
             >
               Send Me a Message
             </a>
@@ -755,21 +750,20 @@
         </div>
       </div>
     </section>
-
     <footer>
       <div class="footer-content">
         <div class="footer-section">
           <h4>Contact Information</h4>
           <p>Email: tdevane@proton.me</p>
-          <p>Location: United States</p>
+          <p>Location: West Hartford, CT</p>
           <p>Available for remote work</p>
         </div>
         <div class="footer-section">
           <h4>Expertise</h4>
-          <p>Professional Development</p>
-          <p>Instructional Design</p>
-          <p>Learning Technology</p>
-          <p>AI-Driven Initiatives</p>
+          <p>Learning Experience Design</p>
+          <p>Sales &amp; GTM Enablement</p>
+          <p>Certification Programs</p>
+          <p>AI-Augmented Content</p>
         </div>
         <div class="footer-section">
           <h4>Connect</h4>
@@ -792,9 +786,11 @@
           border-top: 1px solid #333;
         "
       >
-        <p>&copy; 2025 TJ Devane. All rights reserved.</p>
+        <p>&copy; 2026 TJ Devane. All rights reserved.</p>
       </div>
     </footer>
+
+    <a href="#hero" class="back-to-top" title="Back to top" aria-label="Back to top">&uarr;</a>
 
     <script>
       // Enhanced scroll effects
@@ -802,12 +798,15 @@
         const header = document.querySelector("header");
         const maxScroll = 300;
         const progress = Math.min(window.scrollY / maxScroll, 1);
-
-        // Smooth background transition
         const r = Math.round(255 - (255 - 200) * progress);
         const g = Math.round(255 - (255 - 200) * progress);
         const b = Math.round(255 - (255 - 200) * progress);
         header.style.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.95)`;
+
+        // Back-to-top visibility
+        document
+          .querySelector(".back-to-top")
+          .classList.toggle("visible", window.scrollY > 500);
       });
 
       // Smooth reveal animations for cards
@@ -815,7 +814,6 @@
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px",
       };
-
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -824,8 +822,6 @@
           }
         });
       }, observerOptions);
-
-      // Observe all cards
       document
         .querySelectorAll(".experience-card, .portfolio-item")
         .forEach((card) => {
@@ -834,6 +830,58 @@
           card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
           observer.observe(card);
         });
+
+      // Subtle count-up animation for metrics
+      const animateCount = (el) => {
+        const target = parseFloat(el.dataset.target);
+        const prefix = el.dataset.prefix || "";
+        const suffix = el.dataset.suffix || "";
+        const duration = 1400;
+        const start = performance.now();
+        const step = (now) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const value = Math.round(target * eased);
+          el.textContent = prefix + value + suffix;
+          if (progress < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      };
+      const metricObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateCount(entry.target);
+              metricObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.6 }
+      );
+      document
+        .querySelectorAll(".metric-number")
+        .forEach((el) => metricObserver.observe(el));
+
+      // Active section highlighting in nav
+      const navLinks = document.querySelectorAll("header nav ul li a");
+      const sections = document.querySelectorAll("section[id]");
+      const navObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const id = entry.target.getAttribute("id");
+              navLinks.forEach((link) =>
+                link.classList.toggle(
+                  "active",
+                  link.getAttribute("href") === "#" + id
+                )
+              );
+            }
+          });
+        },
+        { rootMargin: "-45% 0px -50% 0px" }
+      );
+      sections.forEach((s) => navObserver.observe(s));
     </script>
   </body>
 </html>
