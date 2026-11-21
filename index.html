@@ -3,38 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TJ Devane | Enablement &amp; Readiness</title>
     <meta
       name="description"
-      content="TJ Devane - Enablement & Readiness Strategist with 14+ years across education, EdTech, and SaaS. Sales and GTM enablement, certification programs, and AI-augmented content."
+      content="TJ Devane - Enablement & Readiness Strategist with 14+ years across education, EdTech, and SaaS. Certification programs, PD cohorts, sales and GTM enablement, and AI-augmented content."
     />
     <meta
       name="keywords"
-      content="learning experience design, instructional design, sales enablement, GTM readiness, certification programs, customer success, AI tools, EdTech, SaaS"
+      content="sales enablement, GTM readiness, certification programs, learning experience design, instructional design, customer onboarding, AI tools, EdTech, SaaS"
     />
-    <title>TJ Devane - Portfolio</title>
-    <!-- Using sophisticated font pairing -->
+    <!-- Link previews (LinkedIn, email, Slack) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TJ Devane | Enablement & Readiness" />
+    <meta
+      property="og:description"
+      content="Former math and CS teacher. Now building certification programs, PD cohorts, and sales enablement for a national K-12 SaaS company."
+    />
+    <meta property="og:image" content="https://tjdevane.github.io/portfolio/tj_profile.jpg" />
+    <meta property="og:url" content="https://tjdevane.github.io/portfolio/" />
+    <meta name="twitter:card" content="summary" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234e7c59'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3ETJ%3C/text%3E%3C/svg%3E"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <style>
-      /* Ensure that anchor jumps account for the sticky header */
       html {
         scroll-behavior: smooth;
-        scroll-padding-top: 100px;
+        scroll-padding-top: 80px;
       }
-      /* Enhanced CSS Variables for Colors */
       :root {
         --accent: #4e7c59;
         --accent-hover: #3b5e47;
+        --accent-soft: #e8f0ea;
+        --accent-on-dark: #9cc7a7;
         --text-primary: #1a1a1a;
-        --text-secondary: #666;
+        --text-secondary: #555;
         --background-light: #fafafa;
-        --background-medium: #f5f5f5;
+        --background-medium: #f3f4f2;
         --white: #ffffff;
-        --border-light: #e0e0e0;
-        --shadow-light: rgba(0, 0, 0, 0.08);
-        --shadow-medium: rgba(0, 0, 0, 0.15);
+        --border-light: #e2e4e0;
+        --shadow-light: rgba(0, 0, 0, 0.06);
+        --shadow-medium: rgba(0, 0, 0, 0.12);
       }
       * {
         margin: 0;
@@ -46,85 +59,58 @@
         line-height: 1.7;
         background-color: var(--background-light);
         color: var(--text-primary);
-        font-weight: 400;
       }
       a {
-        text-decoration: none;
         color: inherit;
+        text-decoration: none;
       }
-      /* Enhanced Section Styling */
       section {
         width: 100%;
         padding: 80px 20px;
-        box-sizing: border-box;
-        animation: fadeInUp 0.8s ease-out both;
-        scroll-margin-top: 100px;
-        position: relative;
       }
       .section-content {
-        max-width: 1200px;
+        max-width: 1100px;
         margin: 0 auto;
       }
-      /* Section Dividers */
-      .section-divider {
-        height: 1px;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          var(--border-light),
-          transparent
-        );
-        margin: 40px auto;
-        width: 80%;
-        opacity: 0.6;
-      }
-      /* Enhanced Background Colors */
-      .hero-section {
-        background: linear-gradient(
-          135deg,
-          var(--white) 0%,
-          var(--background-light) 100%
-        );
-      }
-      .about-section {
-        background: var(--background-medium);
-      }
-      .experience-section {
-        background: linear-gradient(
-          135deg,
-          var(--background-light) 0%,
-          var(--white) 100%
-        );
-      }
+      .about-section,
       .portfolio-section {
         background: var(--background-medium);
       }
-      /* Enhanced Header & Navigation */
+
+      /* Header */
       header {
         background-color: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(10px);
-        padding: 20px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid var(--border-light);
         position: sticky;
         top: 0;
         z-index: 100;
-        transition: all 0.3s ease;
       }
-      header nav ul {
+      .nav-bar {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        font-size: 1.3rem;
+      }
+      .nav-links {
         list-style: none;
         display: flex;
-        justify-content: center;
-        gap: 40px;
+        gap: 32px;
       }
-      header nav ul li a {
-        color: var(--text-primary);
+      .nav-links a {
         font-weight: 500;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
         position: relative;
-        padding: 8px 0;
+        padding: 6px 0;
+        transition: color 0.2s ease;
       }
-      header nav ul li a::after {
+      .nav-links a::after {
         content: "";
         position: absolute;
         bottom: 0;
@@ -132,85 +118,40 @@
         width: 0;
         height: 2px;
         background: var(--accent);
-        transition: width 0.3s ease;
+        transition: width 0.2s ease;
       }
-      header nav ul li a:hover::after,
-      header nav ul li a.active::after {
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: var(--accent);
+      }
+      .nav-links a:hover::after,
+      .nav-links a.active::after {
         width: 100%;
       }
-      header nav ul li a:hover,
-      header nav ul li a.active {
-        color: var(--accent);
-      }
-      /* Enhanced Keyframes */
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      /* Enhanced Hero Section */
-      .hero-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 40px;
-        flex-wrap: wrap;
-        text-align: center;
-      }
-      .headshot {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid var(--accent);
-        box-shadow: 0 8px 32px rgba(78, 124, 89, 0.3);
-        transition: transform 0.3s ease;
-      }
-      .headshot:hover {
-        transform: scale(1.05);
-      }
-      .hero-text h1 {
-        font-family: "Playfair Display", serif;
-        font-size: 3.5rem;
-        margin-bottom: 20px;
-        font-weight: 600;
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: 1px solid var(--border-light);
+        border-radius: 8px;
+        padding: 6px 10px;
+        font-size: 1.2rem;
+        cursor: pointer;
         color: var(--text-primary);
-        line-height: 1.2;
       }
-      .hero-text .tagline {
-        font-size: 1.4rem;
-        color: var(--accent);
-        font-weight: 500;
-        margin-bottom: 15px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-      .hero-text p {
-        font-size: 1.3rem;
-        color: var(--text-secondary);
-        font-weight: 400;
-        max-width: 600px;
-        margin: 0 auto;
-      }
-      /* Enhanced Typography */
+
+      /* Headings */
       h2 {
         font-family: "Playfair Display", serif;
-        font-size: 2.8rem;
+        font-size: 2.4rem;
         font-weight: 600;
-        color: var(--text-primary);
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         text-align: center;
         position: relative;
       }
       h2::after {
         content: "";
         position: absolute;
-        bottom: -10px;
+        bottom: -14px;
         left: 50%;
         transform: translateX(-50%);
         width: 60px;
@@ -218,546 +159,756 @@
         background: var(--accent);
         border-radius: 2px;
       }
+      h3 {
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
+        line-height: 1.3;
+      }
       p {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         line-height: 1.8;
         color: var(--text-secondary);
-        margin-bottom: 20px;
+        margin-bottom: 18px;
       }
-      /* Subtle metrics strip */
+
+      /* Hero */
+      .hero-section {
+        background: linear-gradient(135deg, var(--white) 0%, var(--background-light) 100%);
+        padding: 90px 20px;
+      }
+      .hero-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 48px;
+        flex-wrap: wrap;
+      }
+      .headshot {
+        width: 190px;
+        height: 190px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid var(--accent);
+        box-shadow: 0 8px 32px rgba(78, 124, 89, 0.25);
+      }
+      .hero-text {
+        max-width: 600px;
+      }
+      .hero-text .tagline {
+        font-size: 1rem;
+        color: var(--accent);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 8px;
+      }
+      .hero-text h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 3.4rem;
+        font-weight: 600;
+        line-height: 1.15;
+        margin-bottom: 16px;
+      }
+      .hero-text .lede {
+        font-size: 1.25rem;
+        margin-bottom: 28px;
+      }
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 0.98rem;
+        transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+      }
+      .btn svg {
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
+      }
+      .btn-primary {
+        background: var(--accent);
+        color: #fff;
+      }
+      .btn-primary:hover {
+        background: var(--accent-hover);
+        transform: translateY(-2px);
+      }
+      .btn-secondary {
+        border: 1.5px solid var(--accent);
+        color: var(--accent);
+        background: transparent;
+      }
+      .btn-secondary:hover {
+        background: var(--accent-soft);
+        transform: translateY(-2px);
+      }
+
+      /* Metrics */
       .metrics-strip {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
         gap: 30px;
         margin-top: 50px;
         padding-top: 45px;
         border-top: 1px solid var(--border-light);
         text-align: center;
       }
-      .metric .metric-number {
+      .metric-number {
         font-family: "Playfair Display", serif;
         font-size: 2.6rem;
         font-weight: 600;
         color: var(--accent);
         line-height: 1.1;
       }
-      .metric .metric-label {
+      .metric-label {
         font-size: 0.95rem;
         color: var(--text-secondary);
         margin-top: 6px;
       }
-      /* Enhanced Experience Section */
-      .experience-cards-wrapper {
-        width: 100%;
-        margin: 0 auto;
-      }
-      .experience-cards-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
-      }
-      .experience-card {
-        background: var(--white);
-        padding: 30px;
-        border-radius: 12px;
-        text-align: left;
-        border: 1px solid var(--border-light);
-        box-shadow: 0 4px 20px var(--shadow-light);
-        transition: all 0.3s ease;
+
+      /* Experience timeline */
+      .timeline {
         position: relative;
-        overflow: hidden;
+        max-width: 860px;
+        margin: 0 auto;
+        padding-left: 32px;
+        border-left: 2px solid var(--border-light);
       }
-      .experience-card::before {
+      .role {
+        position: relative;
+        background: var(--white);
+        border: 1px solid var(--border-light);
+        border-radius: 12px;
+        padding: 26px 30px;
+        margin-bottom: 26px;
+        box-shadow: 0 4px 18px var(--shadow-light);
+      }
+      .role::before {
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 4px;
-        height: 100%;
+        left: -42px;
+        top: 32px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--white);
+        border: 3px solid var(--accent);
+      }
+      .role-featured::before {
         background: var(--accent);
-        transform: scaleY(0);
-        transition: transform 0.3s ease;
       }
-      .experience-card:hover::before {
-        transform: scaleY(1);
+      .role-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 4px 16px;
+        margin-bottom: 4px;
       }
-      .experience-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 40px var(--shadow-medium);
+      .role h3 {
+        font-size: 1.35rem;
       }
-      .experience-card h3 {
-        font-family: "Playfair Display", serif;
-        font-size: 1.4rem;
-        color: var(--text-primary);
-        margin-bottom: 8px;
-        font-weight: 600;
-      }
-      .experience-card .company {
-        font-size: 1rem;
-        color: var(--accent);
-        font-weight: 500;
-        margin-bottom: 5px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-      .experience-card .exp-date {
+      .role .exp-date {
         font-size: 0.9rem;
-        font-style: italic;
         color: var(--text-secondary);
-        margin-bottom: 20px;
-        opacity: 0.8;
+        white-space: nowrap;
       }
-      .experience-card p {
-        font-size: 1rem;
-        line-height: 1.6;
+      .role .company {
+        font-size: 0.9rem;
+        color: var(--accent);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        margin-bottom: 12px;
+      }
+      .role ul {
+        padding-left: 20px;
         color: var(--text-secondary);
+      }
+      .role li {
+        margin-bottom: 8px;
+        line-height: 1.65;
+      }
+      .role li:last-child {
         margin-bottom: 0;
       }
-      /* Enhanced Portfolio Section */
+      .role p {
+        font-size: 1rem;
+        margin-bottom: 0;
+      }
+      .sub-role {
+        border-top: 1px solid var(--border-light);
+        margin-top: 18px;
+        padding-top: 16px;
+      }
+      .sub-role h4 {
+        font-size: 1.05rem;
+        font-weight: 600;
+      }
+
+      /* Portfolio */
+      .group-label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        color: var(--accent);
+        margin: 0 0 18px;
+      }
+      .case-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+        margin-bottom: 56px;
+      }
+      .case {
+        background: var(--white);
+        border: 1px solid var(--border-light);
+        border-top: 4px solid var(--accent);
+        border-radius: 12px;
+        padding: 26px;
+        box-shadow: 0 4px 18px var(--shadow-light);
+        display: flex;
+        flex-direction: column;
+      }
+      .case h3 {
+        font-size: 1.25rem;
+        margin-bottom: 12px;
+      }
+      .case p {
+        font-size: 0.98rem;
+        margin-bottom: 14px;
+      }
+      .case .result {
+        margin-top: auto;
+        background: var(--accent-soft);
+        border-radius: 8px;
+        padding: 12px 14px;
+        font-size: 0.95rem;
+        color: var(--text-primary);
+      }
+      .case .result strong {
+        color: var(--accent-hover);
+      }
       .portfolio-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 24px;
       }
       .portfolio-item {
         background: var(--white);
-        padding: 30px;
-        border-radius: 12px;
-        text-align: left;
         border: 1px solid var(--border-light);
-        box-shadow: 0 4px 20px var(--shadow-light);
-        transition: all 0.3s ease;
+        border-radius: 12px;
+        padding: 26px;
+        box-shadow: 0 4px 18px var(--shadow-light);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
       .portfolio-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 40px var(--shadow-medium);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px var(--shadow-medium);
       }
       .portfolio-item img {
         width: 100%;
-        height: 250px;
+        height: 220px;
         object-fit: cover;
         border-radius: 8px;
-        margin-bottom: 20px;
-        transition: transform 0.3s ease;
-      }
-      .portfolio-item:hover img {
-        transform: scale(1.02);
+        margin-bottom: 18px;
       }
       .portfolio-item h3 {
-        font-family: "Playfair Display", serif;
-        font-size: 1.3rem;
-        color: var(--text-primary);
-        margin-bottom: 15px;
-        font-weight: 600;
-        line-height: 1.3;
+        font-size: 1.2rem;
+        margin-bottom: 12px;
       }
       .portfolio-item p {
-        margin-bottom: 20px;
-      }
-      .tags {
-        margin-top: 20px;
+        font-size: 0.98rem;
       }
       .tag {
         display: inline-block;
-        background: linear-gradient(135deg, var(--accent), var(--accent-hover));
-        color: white;
-        border-radius: 20px;
-        padding: 8px 16px;
-        margin: 4px 8px 4px 0;
-        font-size: 0.85rem;
+        background: var(--accent-soft);
+        color: var(--accent-hover);
+        border-radius: 999px;
+        padding: 4px 12px;
+        margin: 4px 6px 0 0;
+        font-size: 0.8rem;
         font-weight: 500;
-        transition: transform 0.2s ease;
       }
-      .tag:hover {
-        transform: scale(1.05);
-      }
-      /* Enhanced Footer */
-      footer {
+
+      /* Contact */
+      .contact-box {
         text-align: center;
-        padding: 40px 20px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .contact-box p {
+        font-size: 1.15rem;
+        margin-bottom: 28px;
+      }
+      .contact-box .cta-row {
+        justify-content: center;
+      }
+
+      /* Footer */
+      footer {
+        padding: 48px 20px 28px;
         background: var(--text-primary);
-        color: var(--white);
-        margin-top: 0;
-        font-size: 1rem;
+        color: #fff;
       }
       .footer-content {
-        max-width: 1200px;
+        max-width: 1100px;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 40px;
-        text-align: left;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 36px;
       }
       .footer-section h4 {
         font-family: "Playfair Display", serif;
-        font-size: 1.2rem;
-        margin-bottom: 15px;
-        color: var(--accent);
+        font-size: 1.15rem;
+        margin-bottom: 14px;
+        color: var(--accent-on-dark);
       }
       .footer-section p,
       .footer-section a {
         color: #ccc;
-        margin-bottom: 8px;
+        font-size: 0.95rem;
+        margin-bottom: 6px;
         display: block;
-        transition: color 0.3s ease;
       }
       .footer-section a:hover {
-        color: var(--accent);
+        color: var(--accent-on-dark);
       }
-      .social-links {
-        display: flex;
-        gap: 15px;
-        margin-top: 15px;
-      }
-      .social-links a {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        background: var(--accent);
-        color: white;
-        border-radius: 50%;
+      .footer-bottom {
+        max-width: 1100px;
+        margin: 36px auto 0;
+        padding-top: 18px;
+        border-top: 1px solid #333;
         text-align: center;
-        line-height: 40px;
-        transition: all 0.3s ease;
       }
-      .social-links a:hover {
-        background: var(--accent-hover);
-        transform: scale(1.1);
+      .footer-bottom p {
+        color: #999;
+        font-size: 0.85rem;
+        margin: 0;
       }
-      /* Contact CTA button */
-      .contact-btn {
-        display: inline-block;
-        background: var(--accent);
-        color: white;
-        padding: 15px 30px;
-        border-radius: 25px;
-        font-weight: 500;
-        text-decoration: none;
-        box-shadow: 0 6px 20px rgba(78, 124, 89, 0.25);
-        transition: background 0.3s ease, transform 0.3s ease,
-          box-shadow 0.3s ease;
-      }
-      .contact-btn:hover {
-        background: var(--accent-hover);
-        transform: translateY(-3px);
-        box-shadow: 0 10px 28px rgba(78, 124, 89, 0.35);
-      }
+
       /* Back to top */
       .back-to-top {
         position: fixed;
-        bottom: 30px;
-        right: 30px;
-        width: 48px;
-        height: 48px;
+        bottom: 26px;
+        right: 26px;
+        width: 46px;
+        height: 46px;
         background: var(--accent);
         color: #fff;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         box-shadow: 0 6px 20px rgba(78, 124, 89, 0.35);
         opacity: 0;
         visibility: hidden;
-        transform: translateY(10px);
-        transition: all 0.3s ease;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
         z-index: 90;
       }
       .back-to-top.visible {
         opacity: 1;
         visibility: visible;
-        transform: translateY(0);
       }
-      .back-to-top:hover {
-        background: var(--accent-hover);
-        transform: translateY(-3px);
+
+      /* Reveal on scroll (only when motion is OK and JS ran) */
+      .js-reveal .reveal {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
       }
-      /* Responsive Design */
-      @media (max-width: 768px) {
+      .js-reveal .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .js-reveal .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+        .btn:hover,
+        .portfolio-item:hover {
+          transform: none;
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 760px) {
         section {
-          padding: 60px 20px;
+          padding: 60px 18px;
+        }
+        .hero-container {
+          text-align: center;
+        }
+        .hero-text .cta-row {
+          justify-content: center;
         }
         .hero-text h1 {
           font-size: 2.5rem;
         }
-        .hero-text .tagline {
-          font-size: 1.1rem;
-        }
-        .hero-text p {
+        .hero-text .lede {
           font-size: 1.1rem;
         }
         h2 {
-          font-size: 2.2rem;
+          font-size: 2rem;
         }
-        .experience-cards-container {
-          grid-template-columns: 1fr;
+        .nav-toggle {
+          display: block;
         }
-        .portfolio-grid {
-          grid-template-columns: 1fr;
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          flex-direction: column;
+          gap: 0;
+          background: var(--white);
+          border-bottom: 1px solid var(--border-light);
+          padding: 8px 20px 14px;
         }
-        header nav ul {
-          gap: 20px;
+        .nav-links.open {
+          display: flex;
+        }
+        .nav-links a {
+          display: block;
+          padding: 10px 0;
+        }
+        .timeline {
+          padding-left: 20px;
+        }
+        .role {
+          padding: 22px 20px;
+        }
+        .role::before {
+          left: -30px;
         }
       }
     </style>
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="#hero">Home</a></li>
+      <nav class="nav-bar" aria-label="Main">
+        <a href="#hero" class="brand">TJ Devane</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">&#9776;</button>
+        <ul class="nav-links" id="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#portfolio">Work</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <!-- Hero Section -->
+
+    <!-- Hero -->
     <section id="hero" class="hero-section">
       <div class="section-content">
         <div class="hero-container">
-          <img
-            src="tj_profile.jpg"
-            alt="TJ Devane - Enablement & Readiness Strategist"
-            class="headshot"
-          />
+          <img src="tj_profile.jpg" alt="Photo of TJ Devane" class="headshot" />
           <div class="hero-text">
             <div class="tagline">Enablement &amp; Readiness Strategist</div>
             <h1>TJ Devane</h1>
-            <p>
-              Sales &amp; GTM Enablement | Training, Certification &amp; Readiness
-              Programs | Building Scalable, AI-Augmented Learning Across EdTech
-              and SaaS
+            <p class="lede">
+              Former math and CS teacher. Now I build certification programs, PD
+              cohorts, and sales enablement for a national K-12 SaaS company.
             </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="mailto:tdevane@proton.me">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                Email
+              </a>
+              <a class="btn btn-secondary" href="https://www.linkedin.com/in/thomas-devane/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                LinkedIn
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- About Section -->
+
+    <!-- About -->
     <section id="about" class="about-section">
       <div class="section-content">
         <h2>About Me</h2>
-        <div class="section-divider"></div>
         <p>
           I started in the classroom teaching math, taught myself to code, and
-          founded a high-school computer science department from the ground up.
-          That path, educator to developer to enablement, is the thread that
-          runs through everything I do. I'm happiest where learning meets
-          technology, translating something genuinely complex into something
-          people can actually use.
+          founded a high school computer science department from the ground up.
+          That path, educator to developer to enablement, runs through
+          everything I do. I'm happiest where learning meets technology,
+          turning something complex into something people can actually use.
         </p>
         <p>
           Today, at CodeHS, I build the learning systems and enablement programs
           that help a national K-12 SaaS platform drive adoption and readiness. I
-          work across product, engineering, revenue, and customer-facing teams,
+          work across product, engineering, revenue, and customer-facing teams:
           redesigning certification programs, launching new cohorts, equipping
-          go-to-market teams to sell, and turning raw subject-matter expertise
-          into clear, scalable learning. My computer science background means I
-          can sit comfortably with engineers and SMEs, then carry what they know
+          go-to-market teams to sell, and turning subject-matter expertise into
+          clear, scalable learning. My computer science background means I can
+          sit comfortably with engineers and SMEs, then carry what they know
           back to the people who need it.
         </p>
         <p>
-          I'm genuinely AI-forward in how I work, not as a buzzword but as a
-          daily production habit. I use tools like Claude, custom GPTs, and
-          automation to ship better content faster, and I keep piloting what's
-          new to see what actually earns a place in the workflow. Mostly, I'm
-          driven by curiosity and a bias toward building. I'd rather prototype
+          AI is a daily production habit for me. I use Claude, custom GPTs, and
+          automation to ship better content faster, and I keep testing what's
+          new to see what earns a place in the workflow. I'd rather prototype
           the thing than write a deck about it.
         </p>
         <p>
-          I hold advanced degrees in Education and Computer Science Education, a
-          B.S. in Mathematics, and recent certifications in Agile, Product
-          Management, and Sales Enablement. The numbers below tell the rest of
-          the story.
+          I hold a B.S. in Mathematics, an M.Ed., and a certificate in Computer
+          Science Education, plus certifications in Agile, Product Management,
+          and Sales Enablement.
         </p>
         <div class="metrics-strip">
           <div class="metric">
-            <div class="metric-number" data-target="700" data-suffix="+">0</div>
+            <div class="metric-number" data-target="700" data-suffix="+">700+</div>
             <div class="metric-label">Educators reached through certification</div>
           </div>
           <div class="metric">
-            <div class="metric-number" data-target="4" data-suffix="x">0</div>
-            <div class="metric-label">Growth in PD cohort programs (1 to 4, year over year)</div>
+            <div class="metric-number" data-target="170" data-prefix="$" data-suffix="K">$170K</div>
+            <div class="metric-label">PD cohort revenue this year, up from $47K</div>
           </div>
           <div class="metric">
-            <div class="metric-number" data-target="30" data-prefix="~" data-suffix="%">0</div>
+            <div class="metric-number" data-target="30" data-prefix="~" data-suffix="%">~30%</div>
             <div class="metric-label">Less content dev time via AI workflows</div>
           </div>
           <div class="metric">
-            <div class="metric-number" data-target="14" data-suffix="+">0</div>
+            <div class="metric-number" data-target="14" data-suffix="+">14+</div>
             <div class="metric-label">Years across education, EdTech, and SaaS</div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section">
+
+    <!-- Experience -->
+    <section id="experience">
       <div class="section-content">
         <h2>Professional Experience</h2>
-        <div class="section-divider"></div>
-        <div class="experience-cards-container">
-          <div class="experience-card">
-            <h3>Professional Development Specialist (I to III)</h3>
+        <div class="timeline">
+          <article class="role role-featured reveal">
+            <div class="role-head">
+              <h3>Professional Development Specialist (I to III)</h3>
+              <span class="exp-date">Apr 2023 - Present &middot; Remote</span>
+            </div>
             <div class="company">CodeHS</div>
-            <div class="exp-date">April 2023 - Present &middot; Remote</div>
-            <p>
-              I design and scale learning, enablement, and GTM readiness programs
-              for a national K-12 SaaS platform. I redesigned the flagship
-              Teacher Certification Program end to end (curriculum, mock exams,
-              60+ support videos, and job aids), lifting pass rates 7% across 700+
-              educators, and launched the first national AP CSA Teacher Cohort in
-              2025-26, expanding it into a four-cohort PD program the next year
-              spanning AP CSA, AP CSP, Applied AI, and AP Cyber. I serve as a
-              pre-sales SME on sales and renewal calls (contributing to 3x more
-              cohort requests and 2.5x more purchases), led GTM enablement for a
-              new AI product, and built AI-assisted content workflows that cut
-              development time roughly 30% while managing a team of six.
-            </p>
-          </div>
-          <div class="experience-card">
-            <h3>Software Developer &amp; Service Engineer Coordinator</h3>
+            <ul>
+              <li>
+                Lead the PD cohort program: grew it from 1 cohort (AP CSA,
+                2025-26) to 4 in 2026-27 (AP CSA, AP CSP, Applied AI, AP Cyber),
+                plus 3 spring cohorts. Cohort revenue reached $170K, up from $47K
+                the prior year.
+              </li>
+              <li>
+                Redesigned the Teacher Certification Program end to end
+                (curriculum, mock exams, 60+ support videos, job aids), lifting
+                pass rates 7% across 700+ educators. Run certification cohorts for
+                7 to 10 Florida districts plus Georgia, aligned to Praxis CS
+                (5652), with biweekly progress reports to district leaders.
+              </li>
+              <li>
+                Co-own customer onboarding with the CSM and AM: pre-sales
+                discovery and kickoff, onboarding plans, platform configuration,
+                go-live, and multi-year teacher training.
+              </li>
+              <li>
+                Pre-sales SME on AE and AM calls, contributing to 3x more cohort
+                requests and 2.5x more purchases. Trained AEs and AMs to sell PD
+                services through formal sessions and coaching on live calls.
+              </li>
+              <li>
+                Led GTM enablement for a new AI product across sales, customer
+                success, and marketing. As project manager for a team of six,
+                built AI-assisted content workflows that cut development time
+                about 30%.
+              </li>
+            </ul>
+          </article>
+
+          <article class="role reveal">
+            <div class="role-head">
+              <h3>Software Developer &amp; Service Engineer Coordinator</h3>
+              <span class="exp-date">Aug 2022 - Mar 2023 &middot; Scituate, MA</span>
+            </div>
             <div class="company">AJA International, Inc.</div>
-            <div class="exp-date">August 2022 - March 2023 &middot; Scituate, MA</div>
-            <p>
-              I built CRM and ERP enhancements and internal tooling (HTML, CSS,
-              JavaScript, PHP, MySQL, Bootstrap, jQuery) to organize business and
-              customer communication and streamline global technical service
-              operations. As lead liaison between Engineering and customer-facing
-              teams, I translated complex technical capabilities into clear
-              documentation, job aids, and onboarding materials, managing six
-              service engineers and 50+ daily customer interactions while
-              standardizing CRM workflows to reduce resolution time.
-            </p>
-          </div>
-          <div class="experience-card">
-            <h3>Lead Computer Science &amp; Mathematics Teacher</h3>
-            <div class="company">Anne Arundel County Public Schools</div>
-            <div class="exp-date">August 2017 - June 2022 &middot; Annapolis, MD</div>
-            <p>
-              I founded and scaled the computer science department at a new high
-              school of 1,200+ students, growing it from 1.5 to 3 teachers and 8
-              to 18 courses, and developing AP CS A, AP CS Principles, and
-              cybersecurity curricula. I designed and delivered system-wide
-              professional development on inclusive practices and DEI for 80+
-              educators, conducted performance gap analyses for 175+ learners,
-              coached all new CS teachers, and ran an original two-week MIT App
-              Inventor summer program for middle-school students.
-            </p>
-          </div>
-          <div class="experience-card">
-            <h3>Mathematics Teacher</h3>
+            <ul>
+              <li>
+                Built CRM and ERP enhancements and internal tools (HTML, CSS,
+                JavaScript, PHP, MySQL) to streamline global technical service
+                operations.
+              </li>
+              <li>
+                Front-line intake for 50 to 100 customer tickets daily: assigned
+                them across six service engineers and coordinated troubleshooting,
+                customer solutions, travel, and scheduling, acting as liaison
+                between Engineering and customer-facing teams.
+              </li>
+            </ul>
+          </article>
+
+          <article class="role reveal">
+            <div class="role-head">
+              <div class="company" style="margin-bottom: 0">Anne Arundel County Public Schools</div>
+              <span class="exp-date">Aug 2017 - Jun 2022 &middot; Annapolis, MD</span>
+            </div>
+            <div class="role-head" style="margin-top: 10px">
+              <h3>Lead Computer Science &amp; Mathematics Teacher | CS Department Founder</h3>
+            </div>
+            <ul style="margin-top: 10px">
+              <li>
+                Founded and scaled the CS department at a new 1,200+ student high
+                school, growing it from 1.5 to 3 teachers and 8 to 18 courses,
+                including AP CS A and AP CS Principles.
+              </li>
+              <li>
+                Recruited, interviewed, selected, and then managed and coached new
+                CS teachers.
+              </li>
+              <li>
+                Designed and delivered system-wide PD on inclusive practices for
+                80+ educators, ran performance gap analyses for 175+ learners, and
+                ran an original two-week MIT App Inventor summer program for
+                middle schoolers.
+              </li>
+            </ul>
+            <div class="sub-role">
+              <h4>Computer Science &amp; Mathematics Teacher <span style="font-weight:400;color:var(--text-secondary)">(promoted to Lead)</span></h4>
+              <p>
+                Taught mathematics and computer science, including cybersecurity.
+              </p>
+            </div>
+          </article>
+
+          <article class="role reveal">
+            <div class="role-head">
+              <h3>Mathematics Teacher</h3>
+              <span class="exp-date">Aug 2012 - Jun 2017 &middot; Bel Air, MD</span>
+            </div>
             <div class="company">Harford County Public Schools</div>
-            <div class="exp-date">August 2012 - June 2017 &middot; Bel Air, MD</div>
             <p>
-              I delivered student-centered mathematics instruction while
-              contributing to school-wide professional learning. I designed and
-              facilitated annual math and pedagogical professional development for
-              80+ educators aligned to standards and best practices, coached
-              newly hired teachers through classroom observations and custom
-              resource development, and built academic and behavioral
-              interventions for 30+ at-risk students informed by performance data.
+              Taught mathematics; designed and led annual PD for 80+ educators and
+              coached new teachers through observations and custom resources.
             </p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
-    <!-- Portfolio Section -->
+
+    <!-- Work -->
     <section id="portfolio" class="portfolio-section">
       <div class="section-content">
-        <h2>Featured Projects</h2>
-        <div class="section-divider"></div>
+        <h2>Selected Work</h2>
+
+        <div class="group-label">Programs I've built</div>
+        <div class="case-grid">
+          <article class="case reveal">
+            <h3>Teacher Certification Program Redesign</h3>
+            <p>
+              Rebuilt the certification program end to end: curriculum, mock
+              exams, 60+ support videos, and job aids, aligned to the Praxis CS
+              (5652) exam. Now run as district cohorts across Florida and Georgia,
+              with biweekly progress reports to administrators.
+            </p>
+            <div class="result"><strong>Result:</strong> pass rates up 7% across 700+ educators.</div>
+          </article>
+          <article class="case reveal">
+            <h3>PD Cohort Program</h3>
+            <p>
+              Launched the first national AP CSA teacher cohort in 2025-26, then
+              used participant feedback to design four cohorts for 2026-27 plus
+              three spring cohorts. Trained AEs and AMs to sell it and joined
+              their calls as the SME.
+            </p>
+            <div class="result"><strong>Result:</strong> $170K in revenue, up from $47K the year before.</div>
+          </article>
+          <article class="case reveal">
+            <h3>AI Product Launch Enablement</h3>
+            <p>
+              Built launch enablement for a new AI product for AEs and AMs, CSMs,
+              and Marketing. Project-managed a team of six on AI-assisted content
+              workflows to produce materials faster.
+            </p>
+            <div class="result"><strong>Result:</strong> teacher adoption of the new tool, and about 30% less content development time.</div>
+          </article>
+        </div>
+
+        <div class="group-label">Learning samples</div>
         <div class="portfolio-grid">
-          <div class="portfolio-item">
-            <a href="content/index.html" target="_blank">
-              <img
-                src="Rise_Course_Thumbnail.png"
-                alt="Rise Internet Protocols Course"
-              />
-            </a>
-            <a href="content/index.html" target="_blank">
+          <article class="portfolio-item reveal">
+            <a href="content/index.html" target="_blank" rel="noopener">
+              <img src="Rise_Course_Thumbnail.webp" alt="Rise Internet Protocols course cover" loading="lazy" />
               <h3>Rise Internet Protocols Course</h3>
             </a>
             <p>
-              An engaging introduction to Internet Protocols through interactive
-              modules, real-world examples, and knowledge reinforcement quizzes.
-              Designed to strengthen understanding of fundamental networking
-              concepts.
+              An introduction to internet protocols built from interactive
+              modules, real-world examples, and knowledge-check quizzes.
             </p>
-            <div class="tags">
+            <div>
               <span class="tag">Rise 360</span>
               <span class="tag">Adobe Express</span>
               <span class="tag">Camtasia</span>
               <span class="tag">Vyond</span>
             </div>
-          </div>
-          <div class="portfolio-item">
-            <a
-              href="Applied_Research_Project_Thomas_Devane.pdf"
-              target="_blank"
-            >
-              <img
-                src="typewriter.jpg"
-                alt="Research on Video Production and Cognitive Learning"
-              />
-            </a>
-            <a
-              href="Applied_Research_Project_Thomas_Devane.pdf"
-              target="_blank"
-            >
-              <h3>
-                Designing Video Production with Cognitive Multimedia Learning
-                Theory for Flipped Classroom Engagement
-              </h3>
+          </article>
+          <article class="portfolio-item reveal">
+            <a href="Applied_Research_Project_Thomas_Devane.pdf" target="_blank" rel="noopener">
+              <img src="typewriter.jpg" alt="Typewriter, cover image for research paper" loading="lazy" />
+              <h3>Designing Video Production with Cognitive Multimedia Learning Theory for Flipped Classroom Engagement</h3>
             </a>
             <p>
-              This capstone research explores how applying cognitive multimedia
-              learning principles to video production can significantly enhance
-              student engagement and improve learning outcomes in a flipped
-              classroom environment.
+              Capstone research on applying cognitive multimedia learning
+              principles to instructional video to raise engagement and learning
+              outcomes in a flipped classroom.
             </p>
-            <div class="tags">
+            <div>
               <span class="tag">Cognitive Multimedia Learning</span>
               <span class="tag">Instructional Design</span>
               <span class="tag">Research</span>
-              <span class="tag">Engagement</span>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
-    <!-- Contact Section -->
+
+    <!-- Contact -->
     <section id="contact" class="hero-section">
       <div class="section-content">
         <h2>Get In Touch</h2>
-        <div class="section-divider"></div>
-        <div style="text-align: center; max-width: 600px; margin: 0 auto">
-          <p style="font-size: 1.2rem; margin-bottom: 30px">
-            I'm always interested in discussing new opportunities,
-            collaborations, or learning projects. Let's connect and explore how
-            we can work together to create impactful learning experiences.
+        <div class="contact-box">
+          <p>
+            Open to enablement, readiness, and pre-sales roles. Remote, or hybrid
+            in the Hartford area. Email is fastest.
           </p>
-          <div style="margin-top: 40px">
-            <a
-              href="https://www.linkedin.com/in/thomas-devane/"
-              target="_blank"
-              class="contact-btn"
-            >
-              Send Me a Message
-            </a>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="mailto:tdevane@proton.me">Email Me</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/thomas-devane/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
       </div>
     </section>
+
     <footer>
       <div class="footer-content">
         <div class="footer-section">
-          <h4>Contact Information</h4>
-          <p>Email: tdevane@proton.me</p>
-          <p>Location: West Hartford, CT</p>
-          <p>Available for remote work</p>
+          <h4>Contact</h4>
+          <a href="mailto:tdevane@proton.me">tdevane@proton.me</a>
+          <p>Greater Hartford area, CT</p>
+          <p>Open to remote or hybrid</p>
         </div>
         <div class="footer-section">
           <h4>Expertise</h4>
@@ -767,122 +918,99 @@
           <p>AI-Augmented Content</p>
         </div>
         <div class="footer-section">
-          <h4>Connect</h4>
-          <p>Let's discuss your next learning project</p>
-          <div class="social-links">
-            <a
-              href="https://www.linkedin.com/in/thomas-devane/"
-              target="_blank"
-              title="LinkedIn"
-              >L</a
-            >
-          </div>
+          <h4>Links</h4>
+          <a href="https://www.linkedin.com/in/thomas-devane/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
-      <div
-        style="
-          text-align: center;
-          margin-top: 40px;
-          padding-top: 20px;
-          border-top: 1px solid #333;
-        "
-      >
-        <p>&copy; 2026 TJ Devane. All rights reserved.</p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TJ Devane</p>
       </div>
     </footer>
 
-    <a href="#hero" class="back-to-top" title="Back to top" aria-label="Back to top">&uarr;</a>
+    <a href="#hero" class="back-to-top" aria-label="Back to top">&uarr;</a>
 
     <script>
-      // Enhanced scroll effects
-      window.addEventListener("scroll", function () {
-        const header = document.querySelector("header");
-        const maxScroll = 300;
-        const progress = Math.min(window.scrollY / maxScroll, 1);
-        const r = Math.round(255 - (255 - 200) * progress);
-        const g = Math.round(255 - (255 - 200) * progress);
-        const b = Math.round(255 - (255 - 200) * progress);
-        header.style.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.95)`;
+      // Mobile menu
+      const toggle = document.querySelector(".nav-toggle");
+      const links = document.getElementById("nav-links");
+      toggle.addEventListener("click", () => {
+        const open = links.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", open);
+      });
+      links.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", () => {
+          links.classList.remove("open");
+          toggle.setAttribute("aria-expanded", "false");
+        })
+      );
 
-        // Back-to-top visibility
-        document
-          .querySelector(".back-to-top")
-          .classList.toggle("visible", window.scrollY > 500);
+      // Back-to-top
+      const backToTop = document.querySelector(".back-to-top");
+      window.addEventListener("scroll", () => {
+        backToTop.classList.toggle("visible", window.scrollY > 500);
       });
 
-      // Smooth reveal animations for cards
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-          }
-        });
-      }, observerOptions);
-      document
-        .querySelectorAll(".experience-card, .portfolio-item")
-        .forEach((card) => {
-          card.style.opacity = "0";
-          card.style.transform = "translateY(20px)";
-          card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-          observer.observe(card);
-        });
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-      // Subtle count-up animation for metrics
-      const animateCount = (el) => {
-        const target = parseFloat(el.dataset.target);
-        const prefix = el.dataset.prefix || "";
-        const suffix = el.dataset.suffix || "";
-        const duration = 1400;
-        const start = performance.now();
-        const step = (now) => {
-          const progress = Math.min((now - start) / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 3);
-          const value = Math.round(target * eased);
-          el.textContent = prefix + value + suffix;
-          if (progress < 1) requestAnimationFrame(step);
+      // Reveal on scroll (content stays visible if JS fails)
+      if (!reduceMotion && "IntersectionObserver" in window) {
+        document.documentElement.classList.add("js-reveal");
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in");
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+        );
+        document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+
+        // Count-up for metrics
+        const animateCount = (el) => {
+          const target = parseFloat(el.dataset.target);
+          const prefix = el.dataset.prefix || "";
+          const suffix = el.dataset.suffix || "";
+          const start = performance.now();
+          const step = (now) => {
+            const p = Math.min((now - start) / 1400, 1);
+            el.textContent = prefix + Math.round(target * (1 - Math.pow(1 - p, 3))) + suffix;
+            if (p < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
         };
-        requestAnimationFrame(step);
-      };
-      const metricObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              animateCount(entry.target);
-              metricObserver.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.6 }
-      );
-      document
-        .querySelectorAll(".metric-number")
-        .forEach((el) => metricObserver.observe(el));
+        const metricObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                animateCount(entry.target);
+                metricObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.6 }
+        );
+        document.querySelectorAll(".metric-number").forEach((el) => metricObserver.observe(el));
+      }
 
-      // Active section highlighting in nav
-      const navLinks = document.querySelectorAll("header nav ul li a");
-      const sections = document.querySelectorAll("section[id]");
+      // Active section in nav
+      const navLinks = document.querySelectorAll(".nav-links a");
       const navObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              const id = entry.target.getAttribute("id");
+              const id = entry.target.id;
               navLinks.forEach((link) =>
-                link.classList.toggle(
-                  "active",
-                  link.getAttribute("href") === "#" + id
-                )
+                link.classList.toggle("active", link.getAttribute("href") === "#" + id)
               );
             }
           });
         },
         { rootMargin: "-45% 0px -50% 0px" }
       );
-      sections.forEach((s) => navObserver.observe(s));
+      document.querySelectorAll("section[id]").forEach((s) => navObserver.observe(s));
     </script>
   </body>
 </html>
